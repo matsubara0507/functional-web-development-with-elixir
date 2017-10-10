@@ -88,9 +88,25 @@ Part III では，Phoenix を使ったもので作り直す(直すかどうか�
 
 ### Part II — Add OTP for Concurrency and Fault Tolerance
 
+第一部でアプリケーションのコアとなる部分を完成させた．
+そのため，第二部ではいよいよ， *並行性(concurrency)* と *並列性(parallelism)* の世界へと足を踏み入れる．
+OTPは，並行処理のために *GenSrever* を構築し，[フォールトトレランス](http://e-words.jp/w/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%88%E3%83%88%E3%83%AC%E3%83%A9%E3%83%B3%E3%82%B9.html)とリカバリーのために *Supervisor* を追加することで，その道へ導く．
+
 #### 5. Wrap It Up In a GenServer
 
+本章ですること
+- ゲームロジックの GenServer を実装する
+- ゲームサーバーのプロセスのパブリックなインターフェースを定義する
+- OTP Behaviour における共通パターンを実践する
+- GenServer を正しい状態で初期化する
+- 個々のゲームに名前を付けるためにプロセスの登録を使用する
+
 #### 6. Process Supervision For Recovery
+
+本章ですること
+- プロセスを開始する様々な方法をより深く見てみる
+- プロセスを監査するための様々な戦略を検討する
+- 粒度のための Supervisor のツリーを構築する
 
 ### Part III — Add a Web Interface With Phoenix
 
