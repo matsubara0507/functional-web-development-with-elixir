@@ -84,6 +84,8 @@ Part III では，Phoenix を使ったもので作り直す(直すかどうか�
 今日の Web 開発において，イベントハンドリングや状態の変化は非常に重要なトピックで，これらを Elixir (もとい関数型プログラミング)でどのように表現するか．
 その方法のひとつ(?)がステートマシン，という話っぽいです(読んでみないとよくわからない)．
 
+ちなみに，Elixir ではプロセスで保持するデータのことを *state* と呼ぶらしいが，本章では一般的な意味合いで state という単語を用いているらしい．
+
 ### Part II — Add OTP for Concurrency and Fault Tolerance
 
 #### 5. Wrap It Up In a GenServer
