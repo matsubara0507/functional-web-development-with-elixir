@@ -110,9 +110,31 @@ OTPは，並行処理のために *GenSrever* を構築し，[フォールトト
 
 ### Part III — Add a Web Interface With Phoenix
 
+第一部，第二部でゲームエンジンが完成した．
+そのため，ここからはロジックと Web を介してやり取りをするインターフェースを提供しよう．
+Phoenix はこの要件に対して素晴らしい役割を果たす．
+新しく Phoenix アプリケーションを作成し，ゲームエンジンを依存関係として追加する．
+私たちのゲームエンジンは状態を持つため，Phoenix Channels が提供する永続的な多重接続を利用するのが理想的である．
+
+[Phoenix Channels](https://hexdocs.pm/phoenix/channels.html) は Phoenix が提供する WebSocket のようなステートフルなリアルタイム通信を簡単に扱う機能です(単純な WebSocket ラッパーではなく，それ以上の機能を持ち，WebSocket を使う必要もな無いらしい)．
+Phoenix の目玉機能の一つだそうだ．
+
 #### 7. Generate a New Web Interface With Phoenix
 
+本章ですること
+- 新しい Phoenix アプリケーションの作成(ただし Ecto は抜きで)
+- 依存関係として作成したゲームエンジンを持ち込む
+- Web インターフェイスの監視ツリーにゲームエンジンを組み込む
+
+Ecto 抜きの理由は分からない(読めばわかる？)
+
 #### 8. Create Persistent Connections With Phoenix Channels
+
+本章ですること
+- GenSrver と直接通信する Channel を作成する
+- ひとつの GenServer に通信を集中させるために [“topic:subtopic” 規約](https://hexdocs.pm/phoenix/channels.html#topics)を使用する
+- 各ゲームコマンドごとに別々の `handle_in` イベントを定義する — `new game`, `join game`, `fire shot`, などなど
+- コンソールで私たちの Channel とやり取りして動作するようにする
 
 ### A1. Testing
 
