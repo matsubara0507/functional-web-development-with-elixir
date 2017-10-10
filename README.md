@@ -138,4 +138,8 @@ Ecto 抜きの理由は分からない(読めばわかる？)
 
 ### A1. Testing
 
+まだ何も書かれていない(“Content to be supplied later” だそうです)．
+
 ### A2. Installing System Dependencies
+
+まだ何も書かれていない(“Content to be supplied later” だそうです)．
