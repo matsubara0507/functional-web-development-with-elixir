@@ -110,6 +110,8 @@ OTPは，並行処理のために *GenSrever* を構築し，[フォールトト
 - プロセスを監査するための様々な戦略を検討する
 - 粒度のための Supervisor のツリーを構築する
 
+ただし，まだ中身は書かれていない(“Content to be supplied later” だそうです)．
+
 ### Part III — Add a Web Interface With Phoenix
 
 第一部，第二部でゲームエンジンが完成した．
