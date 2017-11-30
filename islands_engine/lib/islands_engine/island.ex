@@ -29,6 +29,7 @@ defmodule IslandsEngine.Island do
     end
   end
 
+  defp offsets(:atoll), do: [{0, 0}, {0, 1}, {1, 1}, {2, 0}, {2, 1}]
   defp offsets(:square), do: [{0, 0}, {0, 1}, {1, 0}, {1, 1}]
   defp offsets(:dot), do: [{0, 0}]
   defp offsets(:l_shape), do: [{0, 0}, {1, 0}, {2, 0}, {2, 1}]
