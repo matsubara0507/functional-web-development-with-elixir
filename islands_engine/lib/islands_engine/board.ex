@@ -33,7 +33,7 @@ defmodule IslandsEngine.Board do
     end)
   end
 
-  defp guess_response(:miss, board), do: {:miss, :none, :noo_win, board}
+  defp guess_response(:miss, board), do: {:miss, :none, :no_win, board}
 
   defp guess_response({key, island}, board) do
     board = %{board | key => island}
