@@ -14,6 +14,17 @@
 - [書籍のホームページ](https://pragprog.com/book/lhelph/functional-web-development-with-elixir-otp-and-phoenix)
 - [他の Elixir に関する書籍](https://github.com/sger/ElixirBooks)
 
+## Run
+
+Docker を使ってる
+
+```
+$ docker run -v /c/Users/hoge/functional-web-development-with-elixir/islands_engine:/root/islands_engine -it --n
+ame islands_engine elixir:1.6 /bin/bash
+# cd ~/islands_engine
+# iex -S mix
+```
+
 ## Contents
 
 公式サイトのは少し古いのかな？
@@ -72,7 +83,7 @@ Part III では，Phoenix を使ったもので作り直す(直すかどうか�
 - 状態を保持し変更できるような [GenServer](https://elixir-lang.org/getting-started/mix-otp/genserver.html) を作成
 
 第1部では，並行に関する機能は出てこないと思ったが....？？？
-でも，**この章はまだ未完成(“Content to be supplied later.” とのこと)**なのでよくわかりません．
+でも，**この章はまだ未完成(“Content to be supplied later.” とのこと)** なのでよくわかりません．
 
 ちなみに，本書(もとい Elixir 関連のドキュメント)での *プロセス(process)* という単語は，OS 由来のプロセスでなく，ErlangVM のプロセスを指してると思われる．
 
