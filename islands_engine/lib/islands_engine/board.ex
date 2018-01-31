@@ -5,7 +5,7 @@ defmodule IslandsEngine.Board do
 
   def position_island(board, key, %Island{} = island) do
     case overlaps_existing_island?(board, key, island) do
-      true  -> {:error, :overlapping_island}
+      true -> {:error, :overlapping_island}
       false -> Map.put(board, key, island)
     end
   end
@@ -16,8 +16,7 @@ defmodule IslandsEngine.Board do
     end)
   end
 
-  def all_islands_positioned?(board), do:
-    Enum.all?(Island.types, &(Map.has_key?(board, &1)))
+  def all_islands_positioned?(board), do: Enum.all?(Island.types(), &Map.has_key?(board, &1))
 
   def guess(board, %Coordinate{} = coordinate) do
     board
@@ -29,7 +28,7 @@ defmodule IslandsEngine.Board do
     Enum.find_value(board, :miss, fn {key, island} ->
       case Island.guess(island, coordinate) do
         {:hit, island} -> {key, island}
-        :miss          -> false
+        :miss -> false
       end
     end)
   end
@@ -41,10 +40,9 @@ defmodule IslandsEngine.Board do
     {:hit, forest_check(board, key), win_check(board), board}
   end
 
-
   defp forest_check(board, key) do
     case forested?(board, key) do
-      true  -> key
+      true -> key
       false -> :none
     end
   end
@@ -57,12 +55,11 @@ defmodule IslandsEngine.Board do
 
   defp win_check(board) do
     case all_forested?(board) do
-      true  -> :win
+      true -> :win
       false -> :no_win
     end
   end
 
-  defp all_forested?(board), do:
-    Enum.all?(board, fn {_key, island} -> Island.forested?(island) end)
-
+  defp all_forested?(board),
+    do: Enum.all?(board, fn {_key, island} -> Island.forested?(island) end)
 end
