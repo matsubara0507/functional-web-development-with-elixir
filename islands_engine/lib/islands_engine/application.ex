@@ -10,7 +10,7 @@ defmodule IslandsEngine.Application do
     children = [
       {Registry, keys: :unique, name: Registry.Game}
     ]
-    
+
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: IslandsEngine.Supervisor]
