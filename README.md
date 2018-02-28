@@ -19,10 +19,22 @@
 Docker を使ってる
 
 ```
-$ docker run -v /c/Users/hoge/functional-web-development-with-elixir/islands_engine:/root/islands_engine -it --n
+$ docker run -v /c/Users/hoge/functional-web-development-with-elixir:/root/islands p 4000:4000 -it --n
 ame islands_engine elixir:1.6 /bin/bash
-# cd ~/islands_engine
+# cd ~/islands/islands_engine
 # iex -S mix
+```
+
+### Islands_Interface
+
+Phoenix (と Node.js)がいる
+
+```
+$ mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
+$ curl -sL https://deb.nodesource.com/setup_6.x | bash -
+$ apt-get install -y nodejs
+$ cd islands_interface
+$ cd assets && npm install --no-bin-links
 ```
 
 ## Contents
