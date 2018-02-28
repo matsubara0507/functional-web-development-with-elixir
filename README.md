@@ -25,6 +25,18 @@ ame islands_engine elixir:1.6 /bin/bash
 # iex -S mix
 ```
 
+### Islands_Interface
+
+Phoenix (と Node.js)がいる
+
+```
+$ mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
+$ curl -sL https://deb.nodesource.com/setup_6.x | bash -
+$ apt-get install -y nodejs
+$ cd islands_interface
+$ cd assets && npm install --no-bin-links
+```
+
 ## Contents
 
 公式サイトのは少し古いのかな？
