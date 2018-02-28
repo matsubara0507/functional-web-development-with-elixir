@@ -10,8 +10,7 @@ config :islands_interface, IslandsInterfaceWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "2PoCi/OBfIW7q6OYy4EtRaHV49X3H1iKt/+Wtlrq6F4VDpCOn4U63vJfUwFnD+VV",
   render_errors: [view: IslandsInterfaceWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: IslandsInterface.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: IslandsInterface.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -20,4 +19,4 @@ config :logger, :console,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
